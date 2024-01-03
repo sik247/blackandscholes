@@ -1,36 +1,47 @@
-NYU Hack 2023 - Black and Scholes (Option Price)
 
-Description:
+# OPTimal #
 
-This Python code is an implementation of the Black-Scholes model for options pricing, integrated into an interactive web application using Streamlit. The Black-Scholes model is a widely-used mathematical formula for calculating the theoretical prices of European-style call and put options.
+### Do you know about option trading? If you are not familar, check out [this link](https://www.youtube.com/watch?v=joJ8mbwuYW8&ab_channel=SkyViewTrading!) ###
 
-Key Components:
+https://www.youtube.com/watch?v=joJ8mbwuYW8&ab_channel=SkyViewTrading
 
-Black-Scholes Functions:
+### What is a fair value of an option and why is it important to get the most accurate prediction? ###
 
-The code defines functions for calculating intermediate terms (d1 and d2) and option prices (calculate_call_price and calculate_put_price) based on the Black-Scholes model. These functions are fundamental for pricing options.
-Interactive Visualization:
+![image](https://user-images.githubusercontent.com/63567363/219904458-54558b24-e88a-4765-a0fa-e1f4e74a113e.png)
 
-The code uses Streamlit to create an interactive web application with sliders for users to input various parameters, such as stock price, strike price, risk-free interest rate, volatility, and time until maturity.
-Plotting Option Prices:
+This value is important to know because it can be used to ascertain whether an option is expensive or reasonably priced. Option traders use fair value as a reference, and profit by purchasing options for less than their fair value or selling them for more than their fair value.
 
-It generates dynamic graphs of option prices for both call and put options based on the input parameters. Users can visualize how option prices change concerning changes in the stock price, strike price, and other factors.
-Navigation Menu:
+### How does the Black-Scholes model work? ###
 
-The application includes a navigation menu with options to explore the Home page, learn about options, and visualize Black-Scholes formulas.
-Usage:
+The Black Scholes model works by using a stock's volatility, current price, strike price, risk-free interest rate for a stable asset, and time to maturity to determine fair the price of a stock option.
 
-Users can input their desired option parameters via the sidebar sliders.
-The application calculates and displays the call and put option prices in real-time.
-Users can observe how these option prices change as they adjust the input parameters.
-Project Purpose:
+### Assumptions ###
 
-The project aims to provide an educational and interactive platform for users to understand options pricing through the Black-Scholes model.
-It allows users to explore the impact of different factors on option prices and gain insights into options trading.
-How to Use:
+The original Black-Scholes model is based on a core assumption that the market consists of at least one risky asset (such as a stock) and one (essentially) risk-free asset, such as a money market fund, cash or a government bond. In addition, it assumes three properties of the two assets, and four of the market itself:
 
-Clone the repository containing this code.
-Install the necessary Python libraries, including Streamlit, Matplotlib, and NumPy.
-Run the Streamlit app using streamlit run filename.py, where filename.py is the name of the Python script.
-Access the interactive web application through the provided URL.
-This project serves as a valuable resource for anyone interested in learning about options trading and the Black-Scholes model. Users can experiment with different scenarios and gain a deeper understanding of options pricing dynamics.
+<ins>Assumptions about the assets in the market are:</ins>
+* The rate of return on the risk-free asset is constant (thus effectively behaves as an interest rate).
+* The instantaneous log return of the risky asset’s price is assumed to behave as an infinitesimal random walk with constant drift and volatility, more precisely, according to geometric Brownian motion.
+* The risky asset does not pay a dividend.
+
+<ins>Assumptions about the market itself are:</ins>
+* There are no arbitrage (risk-free profit) opportunities.
+* It is possible to borrow and lend any amount of cash at the same rate as the interest rate of the risk-free asset.
+* It is possible to buy and sell any amount of the stock (including short selling).
+* There are no transaction costs in the market (i.e. no commission for buying or selling securities or derivative instruments).
+
+
+
+
+### How to Run the Program ###
+
+
+
+After cloning git repository, run the following commands in the terminal:
+
+```
+pip install streamlit
+```
+```
+streamlit run options.py
+```
